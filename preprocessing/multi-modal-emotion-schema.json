@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "multi-LangMER-0.0.1",
+    "title": "Multi-LangMER Schema",
+    "description": "Multiple Language Multi-Modal Emotion Recognition (Multi-LangMER) Schema",
+    "type": "object",
+    "additionalProperties": {
+        "type": "object",
+        "properties": {
+            "movieShortname": {
+                "description": "A short name for the movie. This is a unique identifier for the movie. It is used to identify the movie in the dataset.",
+                "type": "string"
+            },
+            "language": {
+                "description": "The language of the movie.",
+                "type": "string"
+            },
+            "startTime": {
+                "description": "The start time of the utterance in the movie.",
+                "type": "string"
+            },
+            "endTime": {
+                "description": "The end time of the utterance in the movie.",
+                "type": "string"
+            },
+            "contextId": {
+                "description": "A unique identifier for the context of the utterance. This is used to identify the context of the utterance in the dataset.",
+                "type": "string"
+            },
+            "subtitle": {
+                "description": "The subtitle of the utterance.",
+                "type": "string"
+            },
+            "asrText": {
+                "description": "The ASR text of the utterance.",
+                "type": "string",
+                "default": ""
+            },
+            "audioFileID": {
+                "description": "The audio file ID of the utterance.",
+                "type": "string"
+            },
+            "videoFileID": {
+                "description": "The video file ID of the utterance.",
+                "type": "string"
+            },
+            "textFeaturesFileID": {
+                "description": "The text features file ID of the utterance.",
+                "type": "string",
+                "default": ""
+            },
+            "audioFeaturesFileID": {
+                "description": "The audio features file ID of the utterance.",
+                "type": "string",
+                "default": ""
+            },
+            "videoFeaturesFileID": {
+                "description": "The video features file ID of the utterance.",
+                "type": "string",
+                "default": ""
+            }
+        },
+        "required": [
+            "movieShortname",
+            "language",
+            "startTime",
+            "endTime",
+            "contextId",
+            "subtitle",
+            "audioFileID",
+            "videoFileID"
+        ]
+    }
+}

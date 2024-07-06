@@ -1,0 +1,146 @@
+<View style="display: flex;">
+  <View style="flex: 50%">
+    <header value="Utterance Video"/>
+    <Video name="video" value="$video"/>
+    <Choices name="main-categories" choice="multiple" toName="video" showInLine="true">
+      <Choice name="Emotion" value="Emotion"/>
+      <Choice value="Humor"/>
+      <Choice value="Sarcasm"/>
+    </Choices>
+    <Choices name="emotion-type" toName="video" choice="multiple" showInLine="true" visibleWhen="choice-selected" whenTagName="main-categories" whenChoiceValue="Emotion">
+      <View style="width: 100%">
+        <Header value="What type of Emotion?"/>
+      </View>
+      <Choice value="Positive"/>
+      <Choice value="Negative"/>
+      <Choice value="Neutral"/>
+    </Choices>
+    <Choices name="fine-grained-pos-emotion" toName="video" choice="multiple" showInLine="true" visibleWhen="choice-selected" whenTagName="emotion-type" whenChoiceValue="Positive">
+      <View style="width: 100%">
+        <Header value="Fine Grained Positive Emotion?"/>
+      </View>
+      <Choice value="Admiration"/>
+      <View>
+        <Rating name="rating2" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Love"/>
+      <View>
+        <Rating name="rating6" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Optimism"/>
+      <View>
+        <Rating name="rating7" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Joy           "/>
+      <View>
+        <Rating name="rating8" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Excitement"/>
+      <View>
+        <Rating name="rating10" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Caring"/>
+      <View>
+        <Rating name="rating9" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Approval"/>
+      <View>
+        <Rating name="rating3" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Desire"/>
+      <View>
+        <Rating name="rating11" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Gratitude"/>
+      <View>
+        <Rating name="rating4" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Relief"/>
+      <View>
+        <Rating name="rating12" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Amusement"/>
+      <View>
+        <Rating name="rating5" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Pride"/>
+      <View>
+        <Rating name="rating13" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+    </Choices>
+    <Choices name="fine-grained-neg-emotion" toName="video" choice="multiple" showInLine="true" visibleWhen="choice-selected" whenTagName="emotion-type" whenChoiceValue="Negative">
+      <View style="width: 100%">
+        <Header value="Fine Grained Negative Emotion?"/>
+      </View>
+      <Choice value="Annoyance"/>
+      <View>
+        <Rating name="rating14" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Disapproval"/>
+      <View>
+        <Rating name="rating15" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Anger"/>
+      <View>
+        <Rating name="rating16" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Disgusting"/>
+      <View>
+        <Rating name="rating19" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Sadness"/>
+      <View>
+        <Rating name="rating17" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Nervousness"/>
+      <View>
+        <Rating name="rating23" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Fear"/>
+      <View>
+        <Rating name="rating20" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Embarrassment"/>
+      <View>
+        <Rating name="rating22" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Remorse"/>
+      <View>
+        <Rating name="rating21" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Disappointment"/>
+      <View>
+        <Rating name="rating18" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Grief"/>
+      <View>
+        <Rating name="rating24" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+    </Choices>
+    <Choices name="fine-grained-neutr-emotion" toName="video" choice="multiple" showInLine="true" visibleWhen="choice-selected" whenTagName="emotion-type" whenChoiceValue="Neutral">
+      <View style="width: 100%">
+        <Header value="Fine Grained Neutral Emotion?"/>
+      </View>
+      <Choice value="Realization"/>
+      <View>
+        <Rating name="rating25" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Curiosity"/>
+      <View>
+        <Rating name="rating26" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Confusion"/>
+      <View>
+        <Rating name="rating27" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+      <Choice value="Surprise"/>
+      <View>
+        <Rating name="rating28" toName="main-categories" maxRating="10" icon="star" size="small"/>
+      </View>
+    </Choices>
+  </View>
+  <View style="flex: 50%; margin-left: 1em">
+    <header value="Context video"/>
+    <Video name="video2" value="$video2"/>
+  </View>
+</View>
