@@ -1,7 +1,20 @@
 import moviepy.editor as mp
 import csv, sys, os
 
+import csv
+
 def create_csv(filename, fields, csv_rows):
+	"""
+	Create a CSV file with the given filename, fields, and rows.
+
+	Args:
+		filename (str): The name of the CSV file to create.
+		fields (list): A list of strings representing the field names.
+		csv_rows (list): A list of lists representing the rows of data.
+
+	Returns:
+		None
+	"""
 	with open(filename, 'w') as csvfile: 
 		csvwriter = csv.writer(csvfile) 
 		csvwriter.writerow(fields) 
